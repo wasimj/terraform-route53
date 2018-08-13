@@ -8,9 +8,9 @@ resource "aws_route53_zone" "example" {
 }
 
 resource "aws_route53_record" "services" {
-	zone_id = "${aws_route53_zone.example.zone_id}"
-	name 	= "services"
-	type 	= "A"
+  zone_id = "${aws_route53_zone.example.zone_id}"
+  name 	= "services"
+  type 	= "A"
   ttl   = "3600"
   records        = ["10.10.10.10"]
 }
